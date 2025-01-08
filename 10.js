@@ -30,7 +30,15 @@
 // TODO: groupBy 함수를 작성하세요.
 
 function groupBy(arr, key) {
-  // 여기에 코드를 작성하세요.
+    // 여기에 코드를 작성하세요.
+    let newArr = {};
+    arr.forEach((a) => {
+        if (!newArr[a[key]]) {
+            newArr[a[key]] = [a];
+        } else {
+            newArr[a[key]].push(a);
+        }
+    });
 }
 
 // export를 수정하지 마세요.
