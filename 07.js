@@ -26,10 +26,7 @@
 // TODO: get20sEmail 함수를 작성하세요.
 function get20sEmail(arr) {
     let newArr = structuredClone(arr);
-    newArr = newArr.filter((a) => a.age >= 20 && a.age < 30).sort((a, b) => {
-        let c = b - a; 
-        
-    })
+    newArr = newArr.filter((a) => a.age >= 20 && a.age < 30).sort((a, b) => a.age - b.age).map((a) => a.email);
     return newArr;
 }
 

@@ -16,20 +16,11 @@
 // 0, 1, 2, 3, 4
 // TODO: chunkArray 함수를 작성하세요.
 function chunkArray(arr, size) {
-  // TODO
-  let newArr = [];
-  if (arr.length < size) {
-    newArr = [[arr]];
-  } else {
-    arr.forEach((a, i) => {
-        if (size % i === 0) {
-            newArr.push([a]);
-        } else {
-            newArr[Math.floor(size / i)].push(a);
-        }
-    });
-  }
-  
+    let newArr = [];
+    for (let i = 0; i < arr.length; i += size) {
+        newArr.push(arr.slice(i, i + size)); 
+    }
+    return newArr;
 }
 
 // export를 수정하지 마세요.
